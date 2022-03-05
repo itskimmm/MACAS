@@ -6,6 +6,7 @@ import Dashboard from "./views/teacher/Dashboard.vue"
 import DQuizzes from "./views/teacher/DQuizzes.vue"
 import DRoom from "./views/teacher/DRoom.vue"
 
+import SignUp from "./views/teacher/SignUp.vue"
 import Join from "./views/student/Join.vue"
 
 const router = createRouter({
@@ -17,6 +18,7 @@ const router = createRouter({
     {path: "/teacher/quizzes", component: DQuizzes},
     {path: "/teacher/rooms", component: DRoom},
     {path: "/student/join", component: Join},
+    {path: "/teacher/signup", component: SignUp},
   ],
 });
 
