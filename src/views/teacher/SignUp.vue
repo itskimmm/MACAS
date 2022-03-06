@@ -1,5 +1,5 @@
 <script setup>
-import SignUpForm from "../../components/LoginForm.vue"
+import SignUpForm from "../../components/SignUpForm.vue";
 </script>
 
 <template>
@@ -10,7 +10,7 @@ import SignUpForm from "../../components/LoginForm.vue"
       </router-link>
     </div>
     <div class="flex-row login-card bg-white ">
-      <LoginForm class="flex-1"/>
+      <SignUpForm />
     </div>
   </section>
 </template>
