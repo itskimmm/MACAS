@@ -1,18 +1,26 @@
 <script setup>
-import { ref, computed} from "vue"
+import { ref, computed,getCurrentInstance } from "vue"
 import { useRouter } from "vue-router"
 import { useStore } from "vuex"
 
 const router = useRouter()
 const store = useStore()
-
 const username = ref("")
 const password = ref("")
+const a = getCurrentInstance()
+const b = a.appContext.config.globalProperties.$axios
 
 const onSubmit = (e) => {
-  if(username && password){
-    store.commit("login")
-    router.push("/teacher/dashboard")
+  if(username && password){ 
+    let data = {"umId":username.value,"password":password.value};
+    b.post('http://175.178.111.161:8888/api/login',data).then((response => {
+         console.log(response.data)
+         if(response.data == "成功登入"){
+            store.commit("login")
+            router.push("/teacher/dashboard")
+         }
+    }))
+   
   }
 }
 

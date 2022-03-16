@@ -8,7 +8,6 @@ import DRoom from "./views/teacher/DRoom.vue"
 
 import SignUp from "./views/teacher/SignUp.vue"
 import Join from "./views/student/Join.vue"
-
 const router = createRouter({
   history: createWebHistory(),
   routes: [
