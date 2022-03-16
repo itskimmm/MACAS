@@ -33,7 +33,7 @@ if(loggedIn.value){
     </section>
     <section> 
       <section id="username" class="flex-col mb-1">
-        <label class="tx-xs text-gray-light" for="uname">Username</label>
+        <label class="tx-xs text-gray-light" for="uname">UMAC ID</label>
         <input v-model="username" class="text-cyan-600 tx-md bg-cyan-light br-10 border-none input-primary" type="text" id="uname" name="uname"/>
       </section>
       <section id="password" class="flex-col mt-1 mb-1">
